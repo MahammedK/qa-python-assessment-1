@@ -91,11 +91,6 @@ def two(arg1):
 	# How do we ignore case in a String? help(str) may offer some insight.
 
 def three(input):
-	count = 0
-	vowel = "aeiouAEIOU"
-	for alphabet in input:
-		if alphabet in vowel:
- 			count += 1
 	return count
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
@@ -161,7 +156,7 @@ def five(input):
 	# How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
  
 def six(string, int, char):
-	return False
+    return False
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -184,6 +179,11 @@ def six(string, int, char):
 	# Take a look at the documentation for Strings, List and range.
 
 def seven(inputString, char):
+	inputString = inputString.replace(" ", "")
+	for count, i in enumerate(inputString, start=1):
+		if i == char:
+			print(count, i, char)
+			return count
 	return -1
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
